@@ -43,7 +43,7 @@ let getUsers = () => {
                  <div class="user" onclick="clickUser(${user.id}, this)">
                     <h3>${user.name}</h3>
                     <h3>${user.email}</h3>
-                 </div>`;
+                 </div>`; 
                 usersContainer.innerHTML += content;
             });
         } else { 
@@ -67,3 +67,4 @@ let clickUser = (userID, element) => {
 window.onload = function() {
     getUsers();
 };
+// 
