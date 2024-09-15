@@ -31,11 +31,11 @@ let getUsers = () => {
         .then(users => {
             let usersContainer = document.getElementById("users");
             usersContainer.innerHTML = ''; // Clear previous users
-            
+            let randomInt = Math.floor(Math.random() * 100) + 1;
             users.forEach(user => {
                 let content = `
                 <div class="user" onclick="clickUser(${user.id}, this)">
-                    <img src="https://robohash.org/${user.id}?set=set4" alt="${user.name}">
+                    <img src="https://robohash.org/${user.id*randomInt}?set=set4" alt="${user.name}">
                     <div>
                         <h3>${user.name}</h3>
                         <p>${user.email}</p>
